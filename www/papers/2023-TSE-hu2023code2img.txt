@@ -1,0 +1,7 @@
+@article{hu2023code2img,
+  title={Code2Img: Tree-based Image Transformation for Scalable Code Clone Detection},
+  author={Hu, Yutao and Fang, Yilin and Sun, Yifan and Jia, Yaru and Wu, Yueming and Zou, Deqing and Jin, Hai},
+  journal={IEEE Transactions on Software Engineering},
+  year={2023},
+  publisher={IEEE}
+}

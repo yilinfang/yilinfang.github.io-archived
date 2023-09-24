@@ -1,0 +1,8 @@
+@inproceedings{yuan2023enhancing,
+  title={Enhancing Deep Learning-based Vulnerability Detection by Building Behavior Graph Model},
+  author={Yuan, Bin and Lu, Yifan and Fang, Yilin and Wu, Yueming and Zou, Deqing and Li, Zhen and Li, Zhi and Jin, Hai},
+  booktitle={2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)},
+  pages={2262--2274},
+  year={2023},
+  organization={IEEE}
+}

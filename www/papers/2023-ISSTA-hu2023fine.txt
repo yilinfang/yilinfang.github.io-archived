@@ -1,0 +1,7 @@
+@inproceedings{hu2023fine,
+  title={Fine-Grained Code Clone Detection with Block-Based Splitting of Abstract Syntax Tree},
+  author={Hu, Tiancheng and Xu, Zijing and Fang, Yilin and Wu, Yueming and Yuan, Bin and Zou, Deqing and Jin, Hai},
+  booktitle={Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis},
+  pages={89--100},
+  year={2023}
+}
