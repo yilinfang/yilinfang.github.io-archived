@@ -1,197 +1,190 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
-<html lang="en">
+<html>
 
 <head>
-  <title>Yilin Fang</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="CSE Ph.D. Student at The Ohio State University with interests in software and system security.">
+    <title>Yilin Fang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="CSE Ph.D. Student at The Ohio State University with interests in software and system security.">
 
-  <!-- Bootstrap v3.4.1 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Bootstrap v5.3.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha256-MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98=" crossorigin="anonymous">
 
-  <!-- Font Awesome v4.7.0 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
-    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <!-- Font Awesome v6.4.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/brands.min.css"
+        integrity="sha256-9KtQeoFpBhNtDqmF8InuZmrNihCFDscY5nzZjKI6gIE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/solid.min.css"
+        integrity="sha256-TeYGfWwRa4HdGk/NJS48PiKXrgHFdrY/q6yPhlW0eHo=" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha256-+L0nZX1TcwZ6o+nYiFSXhVxihNSVcG37HM3wzcC8M5E=" crossorigin="anonymous">
 
-  <!-- Font Oswald -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="jxIAPBOV8RA3Ozlo8pqETcmdkx2IgzXdkJCLO8rjKQY">
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="jxIAPBOV8RA3Ozlo8pqETcmdkx2IgzXdkJCLO8rjKQY">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6X99HY3VK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6X99HY3VK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-W6X99HY3VK');
-  </script>
-
+        gtag('config', 'G-W6X99HY3VK');
+    </script>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#about">Yilin Fang</a>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">CV</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <!-- Main Image -->
+                <img class="img-fluid" src="img/avatar_256.png" alt="Yilin Fang">
+                <div class="my-1"><b>Ph.D. Student</b></div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <!-- <li><a href="#">CV</a></li> -->
-        </ul>
-      </div>
+                <!-- Contact Infos on the Sidebar -->
+                <div class="my-1">
+                    Department of Computer Science and Engineering<br>
+                    The Ohio State University<br>
+                    Columbus, OH
+                </div>
+
+                <!-- Links on the Sidebar -->
+                <div class="my-1">
+                    <i class="fa-solid fa-envelope fa-fw"></i> fang.1007 at osu.edu
+                    <br>
+                    <i class="fa-brands fa-github fa-fw"></i> <a href="https://github.com/yilinfang">yilinfang</a>
+                    <br>
+                    <i class="fa-solid fa-graduation-cap fa-fw"></i> <a
+                        href="https://scholar.google.com/citations?user=z1_95MoAAAAJ">Yilin Fang</a>
+                    <br>
+                    <i class="fa-brands fa-linkedin-in fa-fw"></i> <a
+                        href="https://www.linkedin.com/in/yilin-fang-2ba163202/">Yilin Fang</a>
+                    <br>
+                    <i class="fa-brands fa-x-twitter fa-fw"></i> <a
+                        href="https://twitter.com/TweetingYilin">@TweetingYilin</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <!-- About Me -->
+                <h2 id="about">About Me</h2>
+                <div style="text-align: justify;">
+                    <p>
+                        I am <b>Yilin Fang</b>, a first-year Ph.D. student in the <a
+                            href="https://cse.osu.edu/">Department of Computer Science and Engineering (CSE)</a> at <a
+                            href="https://osu.edu/">The Ohio State University (OSU)</a>, where I am a member of <a
+                            href="https://carteryagemann.com/pages/w3cil-lab.html">W3CIL Lab</a> under the supervision
+                        of <a href="https://carteryagemann.com/">Prof. Carter Yagemann</a>. My research focuses on the
+                        intersection of <b>computer security</b> and <b>machine learning</b>, particularly in
+                        <b>automated vulnerability discovery</b>, <b>analysis</b>, and <b>prevention</b>.
+                    </p>
+
+                    <p>
+                        Prior to joining OSU, I earned my Master’s degree in Cyberspace Security from the <a
+                            href="http://cse.hust.edu.cn/">School of Cyber Science and Engineering</a> at <a
+                            href="https://www.hust.edu.cn/">Huazhong University of Science and Technology (HUST)</a> in
+                        2023, under the guidance of <a href="http://faculty.hust.edu.cn/yuanbin12/zh_CN/index.htm">Prof.
+                            Bin Yuan</a>. During my master's program, it was my great fortune to work with <a
+                            href="https://wu-yueming.github.io/">Dr. Yueming Wu</a> on <b>source-code-level
+                            vulnerability discovery</b> and <b>clone detection</b>. I also completed my Bachelor’s
+                        degree in Information Security at HUST in 2020.
+                    </p>
+                </div>
+
+                <!-- Publications -->
+                <h2 id="publications">Publications</h2>
+
+                (
+                <i class="fa-solid fa-globe"></i> = link to paper,
+                <i class="fa-solid fa-file-code"></i> = link to code,
+                <i class="fa-solid fa-paste"></i> = link to bibtex
+                )
+
+                <ol reversed>
+                    <li class="my-1">
+                        <b>Code2Img: Tree-based Image Transformation for Scalable Code Clone Detection</b>
+                        <a href="https://doi.org/10.1109/TSE.2023.3295801"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://github.com/tao7777/code2img"><i class="fa-solid fa-file-code"></i></a>
+                        <a href="papers/2023-TSE-hu2023code2img.txt"><i class="fa-solid fa-paste"></i></a>
+                        <br>
+                        Yutao Hu, <b>Yilin Fang</b>, Yifan Sun, Yaru Jia, Yueming Wu, Deqing Zou, and Hai Jin
+                        <br>
+                        <i>IEEE Transactions on Software Engineering (TSE)</i>, 2023
+                    </li>
+
+                    <li class="my-1">
+                        <b>Fine-grained Code Clone Detection with Block-based Splitting of Abstract Syntax Tree</b>
+                        <a href="https://doi.org/10.1145/3597926.3598040"><i class="fa-solid fa-globe"></i></a>
+                        <a href="papers/2023-ISSTA-hu2023fine.txt"><i class="fa-solid fa-paste"></i></a>
+                        <br>
+                        Tiancheng Hu*, Zijing Xu*, <b>Yilin Fang</b>, Yueming Wu, Bin Yuan, Deqing Zou, and Hai Jin
+                        <br>
+                        <i>(*: under my mentorship)</i>
+                        <br>
+                        In <i>Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and
+                            Analysis
+                            (ISSTA)</i>, 2023
+                    </li>
+
+                    <li class="my-1">
+                        <b>Enhancing Deep Learning-based Vulnerability Detection by Building Behavior Graph Model</b>
+                        <a href="https://doi.org/10.1109/ICSE48619.2023.00190"><i class="fa-solid fa-globe"></i></a>
+                        <a href="papers/2023-ICSE-yuan2023enhancing.txt"><i class="fa-solid fa-paste"></i></a>
+                        <br>
+                        Bin Yuan, Yifan Lu, <b>Yilin Fang</b>, Yueming Wu, Deqing Zou, Zhen Li, Zhi Li, and Hai Jin
+                        <br>
+                        In <i>Proceedings of the 45th IEEE/ACM International Conference on Software Engineering
+                            (ICSE)</i>, 2023
+                    </li>
+                </ol>
+            </div>
+        </div>
+
     </div>
-  </nav>
 
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <!-- Contact Info on the Sidebar -->
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-        <div style="font-family: 'Oswald', sans-serif; font-size: 32px"><b>Yilin Fang</b></div>
-        <div>(he/him)</div>
-        <!-- Main Image -->
-        <img class="img-responsive" src="img/avatar_256.png" alt="Yilin Fang">
-
-        <div style="margin-top: 2%"><b>Ph.D. Student</b></div>
-
-        <!-- Contact Infos on the Sidebar -->
-        <div style="margin-top: 2%">
-          Department of Computer Science and Engineering<br>
-          The Ohio State University<br>
-          Columbus, OH
-        </div>
-
-        <!-- Links on the Sidebar -->
-        <div style="margin-top: 2%">
-          <i class="fa fa-envelope fa-fw" aria-hidden="true"></i> fang.1007 at osu.edu
-          <br>
-          <i class="fa fa-github fa-fw" aria-hidden="true"></i> <a href="https://github.com/yilinfang">yilinfang</a>
-          <br>
-          <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i> <a
-            href="https://scholar.google.com/citations?user=z1_95MoAAAAJ">Yilin Fang</a>
-          <br>
-          <i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> <a
-            href="https://www.linkedin.com/in/yilin-fang-2ba163202/">Yilin Fang</a>
-          <br>
-          <i class="fa fa-twitter fa-fw" aria-hidden="true"></i> <a
-            href="https://twitter.com/TweetingYilin">@TweetingYilin</a>
-        </div>
-      </div>
-
-      <!-- Entries Column -->
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <div style="margin-top: 3%; text-align:justify;">
-          <p>
-            I am <b>Yilin Fang</b>, a first-year Ph.D. student in the <a href="https://cse.osu.edu/">Department of
-              Computer Science and Engineering (CSE)</a> at <a href="https://osu.edu/">The Ohio State University
-              (OSU)</a>, where I am a member of <a href="https://carteryagemann.com/pages/w3cil-lab.html">W3CIL Lab</a>
-            under the supervision of <a href="https://carteryagemann.com/">Prof. Carter Yagemann</a>. My research
-            focuses on the intersection of <b>computer security</b> and <b>machine learning</b>, particularly in
-            <b>automated vulnerability discovery</b>, <b>analysis</b>, and <b>prevention</b>.
-          </p>
-
-          <p>
-            Prior to joining OSU, I earned my Master’s degree in Cyberspace Security from the <a
-              href="http://cse.hust.edu.cn/">School of Cyber Science and Engineering</a> at <a
-              href="https://www.hust.edu.cn/">Huazhong University of Science and Technology (HUST)</a> in 2023, under
-            the guidance of <a href="http://faculty.hust.edu.cn/yuanbin12/zh_CN/index.htm">Prof. Bin Yuan</a>. During my
-            master's program, it was my great fortune to work with <a href="https://wu-yueming.github.io/">Dr. Yueming
-              Wu</a> on <b>source-code-level vulnerability discovery</b> and <b>clone detection</b>. I also completed my
-            Bachelor’s degree in Information Security at HUST in 2020.
-          </p>
-        </div>
-
-        <!-- Publications -->
-        <h2 id="publications">Publications</h2>
-
-        <div style="margin-bottom: 1%;">
-          (
-          <i class="fa fa-globe" aria-hidden="true"></i> = link to paper,
-          <i class="fa fa-file-code-o" aria-hidden="true"></i> = link to code,
-          <i class="fa fa-clipboard" aria-hidden="true"></i> = link to bibtex
-          )
-        </div>
-
-        <ol reversed>
-          <li style="margin-bottom: 1%;">
-            <b>Code2Img: Tree-based Image Transformation for Scalable Code Clone Detection</b>
-            <a href="https://doi.org/10.1109/TSE.2023.3295801"><i class="fa fa-globe" aria-hidden="true"></i></a>
-            <a href="https://github.com/tao7777/code2img"><i class="fa fa-file-code-o" aria-hidden="true"></i></a>
-            <a href="papers/2023-TSE-hu2023code2img.txt"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-            <br>
-            Yutao Hu, <b>Yilin Fang</b>, Yifan Sun, Yaru Jia, Yueming Wu, Deqing Zou, and Hai Jin
-            <br>
-            <i>IEEE Transactions on Software Engineering (TSE)</i>, 2023
-          </li>
-
-          <li style="margin-bottom: 1%;">
-            <b>Fine-grained Code Clone Detection with Block-based Splitting of Abstract Syntax Tree</b>
-            <a href="https://doi.org/10.1145/3597926.3598040"><i class="fa fa-globe" aria-hidden="true"></i></a>
-            <a href="papers/2023-ISSTA-hu2023fine.txt"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-            <br>
-            Tiancheng Hu*, Zijing Xu*, <b>Yilin Fang</b>, Yueming Wu, Bin Yuan, Deqing Zou, and Hai Jin
-            <br>
-            <i>(*: under my mentorship)</i>
-            <br>
-            In <i>Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis
-              (ISSTA)</i>, 2023
-          </li>
-
-          <li style="margin-bottom: 1%;">
-            <b>Enhancing Deep Learning-based Vulnerability Detection by Building Behavior Graph Model</b>
-            <a href="https://doi.org/10.1109/ICSE48619.2023.00190"><i class="fa fa-globe" aria-hidden="true"></i></a>
-            <a href="papers/2023-ICSE-yuan2023enhancing.txt"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-            <br>
-            Bin Yuan, Yifan Lu, <b>Yilin Fang</b>, Yueming Wu, Deqing Zou, Zhen Li, Zhi Li, and Hai Jin
-            <br>
-            In <i>Proceedings of the 45th IEEE/ACM International Conference on Software Engineering (ICSE)</i>, 2023
-          </li>
-        </ol>
-      </div>
-    </div>
     <!-- Footer -->
-    <footer style="text-align: right; padding-top: 10em;">
-      <a style="color:#b5bec9;font-size:0.8em;" href="https://github.com/mavroudisv/plain-academic">This guy made a cool
-        template.</a>
+    <div class="container">
+        <footer class="py-5 text-center" style="font-size: 0.9em;">
+            &copy; 2023 Yilin Fang. Designed with <a href="https://getbootstrap.com/">Bootstrap</a>.
+    </div>
     </footer>
-  </div>
-  <!-- /.container -->
+    </div>
 
-  <!-- jQuery v1.9.1 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"
-    integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-
-  <!-- Bootstrap v3.4.1 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap v5.3.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
 
 </body>
 
