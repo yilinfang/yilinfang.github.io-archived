@@ -1,3 +1,3 @@
 # yilinfang.github.io
 
-My [personal website](https://yilinfang.github.io) made with [Bootstrap](https://getbootstrap.com/), inspired from [Plain-Academic Template](https://github.com/mavroudisv/plain-academic).
+My [personal website](https://yilinfang.github.io) inspired from [https://www.cs.purdue.edu/homes/zhan3299/](https://www.cs.purdue.edu/homes/zhan3299/).
