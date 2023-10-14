@@ -180,19 +180,19 @@
                 <h2 id="contact" class="mt-4">Contact</h2>
                 <hr>
                 <p>
-                    Run the following command in a terminal (GNU) to get my email address:
+                    Run the following command in a shell (with Python installed) to get my email address:
                 </p>
                 <div class="card mb-3 bg-light">
                     <div class="card-body">
-                        <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | base64 --decode</code>
+                        <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
                     </div>
                 </div>
                 <p>
                     Or use the following decoder:
                 </p>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Type (or paste) here..."
-                        aria-label="Decoder" aria-describedby="Decode">
+                    <input type="text" class="form-control" placeholder="Type (or paste) here..." aria-label="Decoder"
+                        aria-describedby="Decode">
                     <button class="btn btn-outline-secondary" type="button" id="button-decode">Decode</button>
                 </div>
             </div>
