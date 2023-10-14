@@ -180,7 +180,7 @@
                 <h2 id="contact" class="mt-4">Contact</h2>
                 <hr>
                 <p>
-                    Run the following command in a terminal(GNU) to get my email address:
+                    Run the following command in a terminal (GNU) to get my email address:
                 </p>
                 <div class="alert alert-light" role="alert">
                     <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | base64 --decode</code>
@@ -191,19 +191,6 @@
                 <div class="input-group">
                     <input type="text" class="form-control" aria-label="Base64 decoder" aria-describedby="Decode">
                     <button class="btn btn-outline-secondary" type="button" id="button-decode">Decode</button>
-                    <!-- Button trigger event -->
-                    <script>
-                        document.getElementById("button-decode").onclick = function () {
-                            var input = document.getElementsByClassName("form-control")[0].value.trim();
-                            var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input)
-                            if (flag) {
-                                var output = atob(input);
-                                document.getElementsByClassName("form-control")[0].value = output;
-                            } else {
-                                document.getElementsByClassName("form-control")[0].value = "Invalid input!";
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -216,6 +203,20 @@
         </footer>
     </div>
 
+    <!-- Button trigger event -->
+    <script>
+        document.getElementById("button-decode").onclick = function () {
+            var input = document.getElementsByClassName("form-control")[0].value.trim();
+            var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input)
+            if (flag) {
+                var output = atob(input);
+                document.getElementsByClassName("form-control")[0].value = output;
+            } else {
+                document.getElementsByClassName("form-control")[0].value = "Invalid input!";
+            }
+        }
+    </script>
+    
     <!-- Bootstrap v5.3.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
