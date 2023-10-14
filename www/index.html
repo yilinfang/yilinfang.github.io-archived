@@ -40,11 +40,6 @@
         .container {
             max-width: 800px;
         }
-
-        .name {
-            font-size: 225%;
-            display: inline;
-        }
     </style>
 </head>
 
@@ -69,7 +64,7 @@
                         <a class="nav-link" href="#publications">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#publications">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">CV</a>
@@ -82,15 +77,15 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="mt-2 mb-3">
-                    <div class="name">Yilin Fang</div> (he/him)
+                <div class="mt-1 mb-2">
+                    <div class="fs-1" style="display: inline;">Yilin Fang</div> (he/him)
                 </div>
 
                 <img decoding="async" style="width: 128px; height: 128px;"
                     class="float-end rounded-circle img-thumbnail" src="img/avatar_256.png" alt="Yilin Fang">
 
                 <div class="float-start">
-                    <b>Ph.D. Student</b> @ <a href="https://cse.osu.edu/">CSE of OSU</a>
+                    <b>Ph.D. Student</b> @ <a href="https://cse.osu.edu/">CSE</a> of <a href="https://osu.edu/">OSU</a>
                     <ul class="mt-2">
                         <li><a href="https://github.com/yilinfang">GitHub</a></li>
                         <li><a href="https://scholar.google.com/citations?user=z1_95MoAAAAJ">Google Scholar</a></li>
@@ -196,6 +191,19 @@
                 <div class="input-group">
                     <input type="text" class="form-control" aria-label="Base64 decoder" aria-describedby="Decode">
                     <button class="btn btn-outline-secondary" type="button" id="button-decode">Decode</button>
+                    <!-- Button trigger event -->
+                    <script>
+                        document.getElementById("button-decode").onclick = function () {
+                            var input = document.getElementsByClassName("form-control")[0].value.trim();
+                            var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input)
+                            if (flag) {
+                                var output = atob(input);
+                                document.getElementsByClassName("form-control")[0].value = output;
+                            } else {
+                                document.getElementsByClassName("form-control")[0].value = "Invalid input!";
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -203,24 +211,10 @@
 
     <!-- Footer -->
     <div class="container">
-        <footer class="py-5 text-center" style="font-size: 0.9em;">
+        <footer class="py-5 text-center fw-lighter" style="font-size: 90%;">
             &copy; 2023 Yilin Fang
         </footer>
     </div>
-
-    <!-- Custom Script -->
-    <script>
-        document.getElementById("button-decode").onclick = function () {
-            var input = document.getElementsByClassName("form-control")[0].value.trim();
-            var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input)
-            if (flag) {
-                var output = atob(input);
-                document.getElementsByClassName("form-control")[0].value = output;
-            } else {
-                document.getElementsByClassName("form-control")[0].value = "Invalid input!";
-            }
-        }
-    </script>
 
     <!-- Bootstrap v5.3.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
