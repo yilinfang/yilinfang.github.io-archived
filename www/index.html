@@ -1,274 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <title>Yilin Fang</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CSE Ph.D. Student at The Ohio State University with interests in software and system security."
+    />
 
-<head>
-  <title>Yilin Fang</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="CSE Ph.D. Student at The Ohio State University with interests in software and system security." />
+    <!-- Bootstrap v5.3.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha256-MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98="
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap v5.3.2 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    integrity="sha256-MBffSnbbXwHCuZtgPYiwMQbfE7z+GOZ7fBPCNB06Z98=" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet" />
+    <!-- Google Site Verification -->
+    <meta
+      name="google-site-verification"
+      content="jxIAPBOV8RA3Ozlo8pqETcmdkx2IgzXdkJCLO8rjKQY"
+    />
 
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="jxIAPBOV8RA3Ozlo8pqETcmdkx2IgzXdkJCLO8rjKQY" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W6X99HY3VK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6X99HY3VK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+      gtag("config", "G-W6X99HY3VK");
+    </script>
 
-    gtag("config", "G-W6X99HY3VK");
-  </script>
+    <!-- Custom Style -->
+    <style>
+      body {
+        font-family: "Source Sans 3", sans-serif;
+      }
 
-  <!-- Custom Style -->
-  <style>
-    body {
-      font-family: "Source Sans 3", sans-serif;
-    }
+      .container {
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+      <div class="container">
+        <!-- Brand -->
+        <img
+          decoding="async"
+          class="img-fluid"
+          src="img/logo.svg"
+          alt="The Ohio State University"
+        />
 
-    .container {
-      max-width: 800px;
-    }
-  </style>
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
-    <div class="container">
-      <!-- Brand -->
-      <img decoding="async" class="img-fluid" src="img/logo.svg" alt="The Ohio State University" />
-
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publications">Publications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <!-- <li class="nav-item">
+        <!-- Navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <!-- <li class="nav-item">
                         <a class="nav-link" href="#">CV</a>
                     </li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <!-- Shadow nav -->
-        <div class="shadow-nav"></div>
-        <div class="mb-2">
-          <div class="fs-1" style="display: inline">Yilin Fang</div>
-          (he/him)
-        </div>
-        <img decoding="async" style="width: 128px; height: 128px" class="float-end rounded-circle img-thumbnail"
-          src="img/avatar_256.png" alt="Yilin Fang" />
-
-        <div class="float-start">
-          <b>Ph.D. Student</b> @ <a href="https://cse.osu.edu/">OSU CSE</a>
-          <ul class="mt-2">
-            <li><a href="https://github.com/yilinfang">GitHub</a></li>
-            <li>
-              <a href="https://scholar.google.com/citations?user=z1_95MoAAAAJ">Google Scholar</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/yilin-fang-2ba163202/">LinkedIn</a>
-            </li>
-            <li><a href="https://twitter.com/yilinfang">Twitter</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
+    </nav>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <!-- About Me -->
-        <!-- Shadow nav -->
-        <div class="shadow-nav"></div>
-        <h2 class="mt-4">About Me</h2>
-        <hr />
-        <div style="text-align: justify">
-          <p>
-            I am <b>Yilin Fang</b>, a first-year Ph.D. student in the
-            <a href="https://cse.osu.edu/">Department of Computer Science and Engineering (CSE)</a>
-            at <a href="https://osu.edu/">The Ohio State University (OSU)</a>,
-            where I am a member of
-            <a href="https://carteryagemann.com/pages/w3cil-lab.html">W3CIL Lab</a>
-            under the supervision of
-            <a href="https://carteryagemann.com/">Prof. Carter Yagemann</a>.
-            My research focuses on the intersection of
-            <b>computer security</b> and <b>machine learning</b>, particularly
-            in <b>automated vulnerability discovery</b>, <b>analysis</b>, and
-            <b>prevention</b>.
-          </p>
-
-          <p>
-            Prior to joining OSU, I earned my Master’s degree in Cyberspace
-            Security from the
-            <a href="http://cse.hust.edu.cn/">School of Cyber Science and Engineering</a>
-            at
-            <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology (HUST)</a>
-            in 2023, under the guidance of
-            <a href="http://faculty.hust.edu.cn/yuanbin12/zh_CN/index.htm">Prof. Bin Yuan</a>. During my master's
-            program, it was my great fortune to work
-            with <a href="https://wu-yueming.github.io/">Dr. Yueming Wu</a> on
-            <b>source-code-level vulnerability discovery</b> and
-            <b>clone detection</b>. I also completed my Bachelor’s degree in
-            Information Security at HUST in 2020.
-          </p>
-        </div>
-
-        <!-- Publications -->
-        <!-- Shadow nav -->
-        <div id="publications" class="shadow-nav"></div>
-        <h2 class="mt-4">Publications</h2>
-        <hr />
-        <ol reversed>
-          <li class="mt-2">
-            <a href="https://doi.org/10.1109/TSE.2023.3295801"><b>Code2Img: Tree-based Image Transformation for Scalable
-                Code
-                Clone Detection</b></a>
-            <a href="https://github.com/tao7777/code2img"><i class="fa-solid fa-file-code"></i></a>
-            <a href="papers/2023-TSE-hu2023code2img.txt"><i class="fa-solid fa-paste"></i></a>
-            <br />
-            Yutao Hu, <b>Yilin Fang</b>, Yifan Sun, Yaru Jia, Yueming Wu,
-            Deqing Zou, and Hai Jin
-            <br />
-            Published in
-            <i>IEEE Transactions on Software Engineering (<b>TSE</b>)</i>,
-            2023
-            <br />
-            [<a href="https://github.com/tao7777/code2img">code</a>][<a
-              href="papers/2023-TSE-hu2023code2img.txt">bibtex</a>]
-          </li>
-
-          <li class="mt-2">
-            <a href="https://doi.org/10.1145/3597926.3598040"><b>Fine-grained Code Clone Detection with Block-based
-                Splitting
-                of Abstract Syntax Tree</b></a>
-            <a href="papers/2023-ISSTA-hu2023fine.txt"><i class="fa-solid fa-paste"></i></a>
-            <br />
-            Tiancheng Hu*, Zijing Xu*, <b>Yilin Fang</b>, Yueming Wu, Bin
-            Yuan, Deqing Zou, and Hai Jin
-            <br />
-            <i>(*: under my mentorship)</i>
-            <br />
-            Appeared in
-            <i>Proceedings of the 32nd ACM SIGSOFT International Symposium on
-              Software Testing and Analysis (<b>ISSTA</b>)</i>, 2023
-            <br />
-            [<a href="papers/2023-ISSTA-hu2023fine.txt">bibtex</a>]
-          </li>
-
-          <li class="mt-2">
-            <a href="https://doi.org/10.1109/ICSE48619.2023.00190"><b>Enhancing Deep Learning-based Vulnerability
-                Detection by
-                Building Behavior Graph Model</b></a>
-            <br />
-            Bin Yuan, Yifan Lu, <b>Yilin Fang</b>, Yueming Wu, Deqing Zou,
-            Zhen Li, Zhi Li, and Hai Jin
-            <br />
-            Appeared in
-            <i>Proceedings of the 45th IEEE/ACM International Conference on
-              Software Engineering (<b>ICSE</b>)</i>, 2023
-            <br />
-            [<a href="papers/2023-ICSE-yuan2023enhancing.txt">bibtex</a>]
-          </li>
-        </ol>
-
-        <!-- Contact -->
-        <!-- Shadow nav -->
-        <div id="contact" class="shadow-nav"></div>
-        <h2 class="mt-4">Contact</h2>
-        <hr />
-        <p>
-          Run the following command in a shell (with Python set up) to get my
-          email address:
-        </p>
-        <div class="card mb-3 bg-light">
-          <div class="card-body">
-            <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
+    <!-- Page Title -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- Shadow nav -->
+          <div class="nav-shadow"></div>
+          <div class="mb-2">
+            <div class="fs-1" style="display: inline">Yilin Fang</div>
+            (he/him)
           </div>
-        </div>
-        <p>Or use the following decoder to <a id="decoder" href="#">decode</a>:</p>
-        <input id="decoder-input" class="form-control" type="text" aria-label="Decoder input">
-        <div class="form-text" id="basic-addon4">
-          Type or paste 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation marks)
-          in the input box and click the decode link above.
+          <img
+            decoding="async"
+            style="width: 128px; height: 128px"
+            class="float-end rounded-circle img-thumbnail"
+            src="img/avatar_256.png"
+            alt="Yilin Fang"
+          />
+
+          <div class="float-start">
+            <b>Ph.D. Student</b> @ <a href="https://cse.osu.edu/">OSU CSE</a>
+            <ul class="mt-2">
+              <li><a href="https://github.com/yilinfang">GitHub</a></li>
+              <li>
+                <a href="https://scholar.google.com/citations?user=z1_95MoAAAAJ"
+                  >Google Scholar</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/yilin-fang-2ba163202/"
+                  >LinkedIn</a
+                >
+              </li>
+              <li><a href="https://twitter.com/yilinfang">Twitter</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <div class="container">
-    <footer class="py-5 text-center" style="font-size: small">
-      &copy; 2023 Yilin Fang
-    </footer>
-  </div>
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!-- About Me -->
+          <!-- Shadow nav -->
+          <div class="nav-shadow"></div>
+          <h2 class="mt-4">About Me</h2>
+          <hr />
+          <div style="text-align: justify">
+            <p>
+              I am <b>Yilin Fang</b>, a first-year Ph.D. student in the
+              <a href="https://cse.osu.edu/"
+                >Department of Computer Science and Engineering (CSE)</a
+              >
+              at
+              <a href="https://osu.edu/">The Ohio State University (OSU)</a>,
+              where I am a member of
+              <a href="https://carteryagemann.com/pages/w3cil-lab.html"
+                >W3CIL Lab</a
+              >
+              under the supervision of
+              <a href="https://carteryagemann.com/">Prof. Carter Yagemann</a>.
+              My research focuses on the intersection of
+              <b>computer security</b> and <b>machine learning</b>, particularly
+              in <b>automated vulnerability discovery</b>, <b>analysis</b>, and
+              <b>prevention</b>.
+            </p>
 
-  <!-- Bootstrap v5.3.2 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
+            <p>
+              Prior to joining OSU, I earned my Master’s degree in Cyberspace
+              Security from the
+              <a href="http://cse.hust.edu.cn/"
+                >School of Cyber Science and Engineering</a
+              >
+              at
+              <a href="https://www.hust.edu.cn/"
+                >Huazhong University of Science and Technology (HUST)</a
+              >
+              in 2023, under the guidance of
+              <a href="http://faculty.hust.edu.cn/yuanbin12/zh_CN/index.htm"
+                >Prof. Bin Yuan</a
+              >. During my master's program, it was my great fortune to work
+              with <a href="https://wu-yueming.github.io/">Dr. Yueming Wu</a> on
+              <b>source-code-level vulnerability discovery</b> and
+              <b>clone detection</b>. I also completed my Bachelor’s degree in
+              Information Security at HUST in 2020.
+            </p>
+          </div>
 
-  <!-- Custom script -->
-  <script>
-    // set the height of navbar for page-title and all shadow-jar when load or resize
-    function setPageStartAndShadowNavHeight() {
-      var navHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
-      var shadowNavs = document.getElementsByClassName("shadow-nav");
-      for (var i = 0; i < shadowNavs.length; i++) {
-        shadowNavs[i].style.height = navHeight + "px";
-        // set margin-top for all shadow-navs except the first one
-        if (i > 0) {
-          shadowNavs[i].style.marginTop = "-" + navHeight + "px";
+          <!-- Publications -->
+          <!-- Shadow nav -->
+          <div id="publications" class="nav-shadow"></div>
+          <h2 class="mt-4">Publications</h2>
+          <hr />
+          <ol reversed>
+            <li class="mt-2">
+              <a href="https://doi.org/10.1109/TSE.2023.3295801"
+                ><b
+                  >Code2Img: Tree-based Image Transformation for Scalable Code
+                  Clone Detection</b
+                ></a
+              >
+              <a href="https://github.com/tao7777/code2img"
+                ><i class="fa-solid fa-file-code"></i
+              ></a>
+              <a href="papers/2023-TSE-hu2023code2img.txt"
+                ><i class="fa-solid fa-paste"></i
+              ></a>
+              <br />
+              Yutao Hu, <b>Yilin Fang</b>, Yifan Sun, Yaru Jia, Yueming Wu,
+              Deqing Zou, and Hai Jin
+              <br />
+              Published in
+              <i>IEEE Transactions on Software Engineering (<b>TSE</b>)</i>,
+              2023
+              <br />
+              [<a href="https://github.com/tao7777/code2img">code</a>][<a
+                href="papers/2023-TSE-hu2023code2img.txt"
+                >bibtex</a
+              >]
+            </li>
+
+            <li class="mt-2">
+              <a href="https://doi.org/10.1145/3597926.3598040"
+                ><b
+                  >Fine-grained Code Clone Detection with Block-based Splitting
+                  of Abstract Syntax Tree</b
+                ></a
+              >
+              <a href="papers/2023-ISSTA-hu2023fine.txt"
+                ><i class="fa-solid fa-paste"></i
+              ></a>
+              <br />
+              Tiancheng Hu*, Zijing Xu*, <b>Yilin Fang</b>, Yueming Wu, Bin
+              Yuan, Deqing Zou, and Hai Jin
+              <br />
+              <i>(*: under my mentorship)</i>
+              <br />
+              Appeared in
+              <i
+                >Proceedings of the 32nd ACM SIGSOFT International Symposium on
+                Software Testing and Analysis (<b>ISSTA</b>)</i
+              >, 2023
+              <br />
+              [<a href="papers/2023-ISSTA-hu2023fine.txt">bibtex</a>]
+            </li>
+
+            <li class="mt-2">
+              <a href="https://doi.org/10.1109/ICSE48619.2023.00190"
+                ><b
+                  >Enhancing Deep Learning-based Vulnerability Detection by
+                  Building Behavior Graph Model</b
+                ></a
+              >
+              <br />
+              Bin Yuan, Yifan Lu, <b>Yilin Fang</b>, Yueming Wu, Deqing Zou,
+              Zhen Li, Zhi Li, and Hai Jin
+              <br />
+              Appeared in
+              <i
+                >Proceedings of the 45th IEEE/ACM International Conference on
+                Software Engineering (<b>ICSE</b>)</i
+              >, 2023
+              <br />
+              [<a href="papers/2023-ICSE-yuan2023enhancing.txt">bibtex</a>]
+            </li>
+          </ol>
+
+          <!-- Contact -->
+          <!-- Shadow nav -->
+          <div id="contact" class="nav-shadow"></div>
+          <h2 class="mt-4">Contact</h2>
+          <hr />
+          <p>
+            Run the following command in a shell (with Python set up) to get my
+            email address:
+          </p>
+          <div class="card mb-3 bg-light">
+            <div class="card-body">
+              <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
+            </div>
+          </div>
+          <p>
+            Or use the following decoder to
+            <a id="decoder" href="#">decode</a>:
+          </p>
+          <form id="form-decoder">
+            <input
+              id="input-decoder"
+              class="form-control"
+              type="text"
+              aria-label="Decoder input"
+            />
+            <div class="form-text" id="basic-addon4">
+              Type (or paste) 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation
+              marks) and press ENTER key (or click the decode link above).
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="py-5 text-center" style="font-size: small">
+        &copy; 2023 Yilin Fang
+      </footer>
+    </div>
+
+    <!-- Bootstrap v5.3.2 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom script -->
+    <script>
+      // set the height of navbar for page-title and all shadow-jar when load or resize
+      function setPageStartAndShadowNavHeight() {
+        var navHeight =
+          document.getElementsByClassName("navbar")[0].offsetHeight;
+        var shadowNavs = document.getElementsByClassName("nav-shadow");
+        for (var i = 0; i < shadowNavs.length; i++) {
+          shadowNavs[i].style.height = navHeight + "px";
+          // set margin-top for all nav-shadows except the first one
+          if (i > 0) {
+            shadowNavs[i].style.marginTop = "-" + navHeight + "px";
+          }
         }
       }
-    }
-    window.onload = setPageStartAndShadowNavHeight();
-    window.onresize = setPageStartAndShadowNavHeight();
+      window.onload = setPageStartAndShadowNavHeight();
+      window.onresize = setPageStartAndShadowNavHeight();
 
-    // event listener for decoder
-    var decoder = document.getElementById("decoder");
-    decoder.addEventListener("click", function (event) {
-      event.preventDefault();
-      var decoder_input = document.getElementById("decoder-input")
-      var input = decoder_input.value.trim();
-      var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input);
-      if (flag) {
-        var output = atob(input);
-        decoder_input.value = output;
-      } else {
-        decoder_input.value = "Invalid input!";
+      // check if the input is valid base64 string
+      function isBase64(str) {
+        try {
+          return btoa(atob(str)) == str;
+        } catch (err) {
+          return false;
+        }
       }
-    });
-  </script>
-</body>
 
+      // decode base64 string from decoder input and put the result back to decoder input
+      function decode() {
+        var decoder_input = document.getElementById("input-decoder");
+        var input = decoder_input.value.trim();
+        if (isBase64(input)) {
+          var output = atob(input);
+          decoder_input.value = output;
+        } else {
+          decoder_input.value = "Invalid input!";
+        }
+      }
+
+      // event listener for decoder
+      var decoder = document.getElementById("decoder");
+      decoder.addEventListener("click", function (event) {
+        event.preventDefault();
+        decode();
+      });
+
+      // event listener for decoder input
+      var form_decoder = document.getElementById("form-decoder");
+      form_decoder.addEventListener("submit", function (event) {
+        event.preventDefault();
+        decode();
+      });
+    </script>
+  </body>
 </html>
