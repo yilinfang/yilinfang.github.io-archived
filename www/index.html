@@ -45,7 +45,7 @@
   </style>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-light navbar-light">
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
     <div class="container">
       <!-- Brand -->
       <img decoding="async" class="img-fluid" src="img/logo.svg" alt="The Ohio State University" />
@@ -78,7 +78,9 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="mt-1 mb-2">
+        <!-- Shadow nav -->
+        <div class="shadow-nav"></div>
+        <div class="mb-2">
           <div class="fs-1" style="display: inline">Yilin Fang</div>
           (he/him)
         </div>
@@ -100,12 +102,16 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
+  <div class="container">
     <div class="row">
       <div class="col">
         <!-- About Me -->
-        <h2 id="about" class="mt-4">About Me</h2>
+        <!-- Shadow nav -->
+        <div class="shadow-nav"></div>
+        <h2 class="mt-4">About Me</h2>
         <hr />
         <div style="text-align: justify">
           <p>
@@ -139,10 +145,12 @@
         </div>
 
         <!-- Publications -->
-        <h2 id="publications" class="mt-4">Publications</h2>
+        <!-- Shadow nav -->
+        <div id="publications" class="shadow-nav"></div>
+        <h2 class="mt-4">Publications</h2>
         <hr />
         <ol reversed>
-          <li class="my-1">
+          <li class="mt-2">
             <a href="https://doi.org/10.1109/TSE.2023.3295801"><b>Code2Img: Tree-based Image Transformation for Scalable
                 Code
                 Clone Detection</b></a>
@@ -160,7 +168,7 @@
               href="papers/2023-TSE-hu2023code2img.txt">bibtex</a>]
           </li>
 
-          <li class="my-1">
+          <li class="mt-2">
             <a href="https://doi.org/10.1145/3597926.3598040"><b>Fine-grained Code Clone Detection with Block-based
                 Splitting
                 of Abstract Syntax Tree</b></a>
@@ -178,7 +186,7 @@
             [<a href="papers/2023-ISSTA-hu2023fine.txt">bibtex</a>]
           </li>
 
-          <li class="my-1">
+          <li class="mt-2">
             <a href="https://doi.org/10.1109/ICSE48619.2023.00190"><b>Enhancing Deep Learning-based Vulnerability
                 Detection by
                 Building Behavior Graph Model</b></a>
@@ -195,7 +203,9 @@
         </ol>
 
         <!-- Contact -->
-        <h2 id="contact" class="mt-4">Contact</h2>
+        <!-- Shadow nav -->
+        <div id="contact" class="shadow-nav"></div>
+        <h2 class="mt-4">Contact</h2>
         <hr />
         <p>
           Run the following command in a shell (with Python set up) to get my
@@ -206,16 +216,11 @@
             <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
           </div>
         </div>
-        <p>Or use the following decoder:</p>
-        <div class="input-group">
-          <input id="input-decoder" type="text" class="form-control" aria-label="Decoder" aria-describedby="Decode" />
-          <button class="btn btn-outline-secondary" type="button" id="button-decode">
-            Decode
-          </button>
-        </div>
+        <p>Or use the following decoder to <a onclick="decode(); return false" href="#">decode</a>:</p>
+        <input id="decoder-input" class="form-control" type="text" aria-label="Decoder input">
         <div class="form-text" id="basic-addon4">
           Type or paste 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation marks)
-          in the input box and click the Decode button.
+          in the input box and click the decode link above.
         </div>
       </div>
     </div>
@@ -232,18 +237,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script>
 
-  <!-- Button trigger event -->
+  <!-- Custom script -->
   <script>
-    document.getElementById("button-decode").onclick = function () {
-      var input = document.getElementById("input-decoder").value.trim();
+    // set the height of navbar for page-title and all shadow-jar when load or resize
+    function setPageStartAndShadowNavHeight() {
+      var navHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
+      console.log(navHeight);
+      var shadowNavs = document.getElementsByClassName("shadow-nav");
+      for (var i = 0; i < shadowNavs.length; i++) {
+        shadowNavs[i].style.height = navHeight + "px";
+        // set margin-top for all shadow-navs except the first one
+        if (i > 0) {
+          shadowNavs[i].style.marginTop = "-" + navHeight + "px";
+        }
+      }
+    }
+    window.onload = setPageStartAndShadowNavHeight();
+    window.onresize = setPageStartAndShadowNavHeight();
+
+    // decode base64 string from decoder-input and put the result back
+    function decode() {
+      var input = document.getElementById("decoder-input").value.trim();
       var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input);
       if (flag) {
         var output = atob(input);
-        document.getElementById("input-decoder").value = output;
+        document.getElementById("decoder-input").value = output;
       } else {
-        document.getElementById("input-decoder").value = "Invalid input!";
+        document.getElementById("decoder-input").value = "Invalid input!";
       }
-    };
+    }
   </script>
 </body>
 
