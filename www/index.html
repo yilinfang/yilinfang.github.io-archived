@@ -216,7 +216,7 @@
             <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
           </div>
         </div>
-        <p>Or use the following decoder to <a onclick="decode(); return false" href="#">decode</a>:</p>
+        <p>Or use the following decoder to <a id="decoder" href="#">decode</a>:</p>
         <input id="decoder-input" class="form-control" type="text" aria-label="Decoder input">
         <div class="form-text" id="basic-addon4">
           Type or paste 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation marks)
@@ -255,8 +255,10 @@
     window.onload = setPageStartAndShadowNavHeight();
     window.onresize = setPageStartAndShadowNavHeight();
 
-    // decode base64 string from decoder-input and put the result back
-    function decode() {
+    // event listener for decoder
+    var decoder = document.getElementById("decoder");
+    decoder.addEventListener("click", function (event) {
+      event.preventDefault();
       var input = document.getElementById("decoder-input").value.trim();
       var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input);
       if (flag) {
@@ -265,7 +267,7 @@
       } else {
         document.getElementById("decoder-input").value = "Invalid input!";
       }
-    }
+    });
   </script>
 </body>
 
