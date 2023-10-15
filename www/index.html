@@ -242,7 +242,6 @@
     // set the height of navbar for page-title and all shadow-jar when load or resize
     function setPageStartAndShadowNavHeight() {
       var navHeight = document.getElementsByClassName("navbar")[0].offsetHeight;
-      console.log(navHeight);
       var shadowNavs = document.getElementsByClassName("shadow-nav");
       for (var i = 0; i < shadowNavs.length; i++) {
         shadowNavs[i].style.height = navHeight + "px";
