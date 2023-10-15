@@ -258,13 +258,14 @@
     var decoder = document.getElementById("decoder");
     decoder.addEventListener("click", function (event) {
       event.preventDefault();
-      var input = document.getElementById("decoder-input").value.trim();
+      var decoder_input = document.getElementById("decoder-input")
+      var input = decoder_input.value.trim();
       var flag = /^[A-Za-z0-9+/]*={0,2}$/.test(input);
       if (flag) {
         var output = atob(input);
-        document.getElementById("decoder-input").value = output;
+        decoder_input.value = output;
       } else {
-        document.getElementById("decoder-input").value = "Invalid input!";
+        decoder_input.value = "Invalid input!";
       }
     });
   </script>
