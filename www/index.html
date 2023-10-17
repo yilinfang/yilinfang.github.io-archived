@@ -108,7 +108,7 @@
         <div class="col">
           <!-- Shadow nav -->
           <div class="nav-shadow"></div>
-          <div class="mb-2">
+          <div class="my-2">
             <div class="fs-1" style="display: inline">Yilin Fang</div>
             (he/him)
           </div>
@@ -192,7 +192,7 @@
           <!-- Publications -->
           <!-- Shadow nav -->
           <div id="publications" class="nav-shadow"></div>
-          <h2 class="mt-4">Publications</h2>
+          <h2 class="mt-2">Publications</h2>
           <hr />
           <ol reversed>
             <li class="mt-3">
@@ -266,7 +266,7 @@
           <!-- Contact -->
           <!-- Shadow nav -->
           <div id="contact" class="nav-shadow"></div>
-          <h2 class="mt-4">Contact</h2>
+          <h2 class="mt-2">Contact</h2>
           <hr />
           <p>
             Run the following command in a shell (with Python set up) to get my
@@ -323,7 +323,11 @@
           shadowNavs[i].style.height = navHeight + "px";
           // set margin-top for all nav-shadows except the first one
           if (i > 0) {
-            shadowNavs[i].style.marginTop = "-" + navHeight + "px";
+            var fontSize = parseFloat(
+              window.getComputedStyle(shadowNavs[i]).fontSize
+            );
+            var marginTop = navHeight - fontSize;
+            shadowNavs[i].style.marginTop = "-" + marginTop + "px";
           }
         }
       }
