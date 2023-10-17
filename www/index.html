@@ -318,6 +318,7 @@
       function setPageStartAndShadowNavHeight() {
         var navHeight =
           document.getElementsByClassName("navbar")[0].offsetHeight;
+        console.log(navHeight);
         var shadowNavs = document.getElementsByClassName("nav-shadow");
         for (var i = 0; i < shadowNavs.length; i++) {
           shadowNavs[i].style.height = navHeight + "px";
@@ -327,8 +328,8 @@
           }
         }
       }
-      window.onload = setPageStartAndShadowNavHeight();
-      window.onresize = setPageStartAndShadowNavHeight();
+      window.onload = setPageStartAndShadowNavHeight;
+      window.onresize = setPageStartAndShadowNavHeight;
 
       // check if the input is valid base64 string
       function isBase64(str) {
