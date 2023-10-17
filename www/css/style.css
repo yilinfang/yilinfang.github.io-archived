@@ -4,20 +4,6 @@ body {
   font-family: "Source Sans 3", sans-serif;
 }
 
-a:link,
-a:visited,
-a.nav-link:link,
-a.nav-link:visited,
-a.nav-link:hover,
-a.nav-link:active {
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  text-decoration: underline;
-}
-
 .container {
   max-width: 800px;
 }
