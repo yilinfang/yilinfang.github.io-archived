@@ -271,23 +271,43 @@
               <code>$ echo ZmFuZy4xMDA3QG9zdS5lZHU= | python -m base64 -d</code>
             </div>
           </div>
-          <p>
-            Or use the following decoder to
-            <a id="decoder" href="#">decode</a>:
-          </p>
-          <form id="form-decoder">
-            <input
-              id="input-decoder"
-              class="form-control"
-              type="text"
-              aria-label="Decoder input"
-            />
-            <div class="form-text" id="basic-addon4">
-              Type (or paste) 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation
-              marks) in the input box and press ENTER key (or click the decode
-              link above).
-            </div>
-          </form>
+
+          <div id="decode">
+            <p>
+              Or use the built-in decoder to
+              <a id="decoder" href="#">decode</a>:
+            </p>
+            <form id="form-decoder">
+              <input
+                id="input-decoder"
+                class="form-control"
+                type="text"
+                aria-label="Decoder input"
+              />
+              <div class="form-text" id="basic-addon">
+                Type (or paste) 'ZmFuZy4xMDA3QG9zdS5lZHU=' (without quotation
+                marks) in the input box and press ENTER key (or click the decode
+                link above).
+              </div>
+            </form>
+          </div>
+
+          <div id="redecode" style="display: none">
+            <p>
+              Or use the built-in decoder to
+              <a id="redecoder" href="#">redecode</a>:
+            </p>
+            <div
+              class="alert alert-success"
+              role="alert"
+              id="decode-output-suc"
+            ></div>
+            <div
+              class="alert alert-warning"
+              role="alert"
+              id="decode-output-failed"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -341,12 +361,30 @@
       function decode() {
         var decoder_input = document.getElementById("input-decoder");
         var input = decoder_input.value.trim();
-        if (isBase64(input)) {
-          var output = atob(input);
-          decoder_input.value = output;
-        } else {
-          decoder_input.value = "Invalid input!";
+        if (!input) {
+          return;
         }
+        var decoder_output_suc = document.getElementById("decode-output-suc");
+        var decoder_output_failed = document.getElementById(
+          "decode-output-failed"
+        );
+        if (input === "ZmFuZy4xMDA3QG9zdS5lZHU=") {
+          decoder_output_suc.innerHTML = atob(input);
+          decoder_output_failed.style.display = "none";
+          decoder_output_suc.style.display = "block";
+        } else {
+          if (!isBase64(input)) {
+            decoder_output_failed.innerHTML = "Invalid input!";
+          } else {
+            decoder_output_failed.innerHTML = atob(input);
+          }
+          decoder_output_suc.style.display = "none";
+          decoder_output_failed.style.display = "block";
+        }
+        var decode = document.getElementById("decode");
+        decode.style.display = "none";
+        var redecode = document.getElementById("redecode");
+        redecode.style.display = "block";
       }
 
       // event listener for decoder
@@ -361,6 +399,16 @@
       form_decoder.addEventListener("submit", function (event) {
         event.preventDefault();
         decode();
+      });
+
+      // event listener for redecoder
+      var redecoder = document.getElementById("redecoder");
+      redecoder.addEventListener("click", function (event) {
+        event.preventDefault();
+        var redecode = document.getElementById("redecode");
+        redecode.style.display = "none";
+        var decode = document.getElementById("decode");
+        decode.style.display = "block";
       });
     </script>
   </body>
