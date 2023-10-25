@@ -280,7 +280,7 @@
           <div id="decode">
             <p>
               Or use the built-in decoder to
-              <a id="decoder" href="#">decode</a>:
+              <a id="decoder-decode" href="#">decode</a>:
             </p>
             <form id="form-decoder">
               <input
@@ -300,12 +300,12 @@
           <div id="redecode" style="display: none">
             <p>
               Or use the built-in decoder to
-              <a id="redecoder" href="#">redecode</a>:
+              <a id="decoder-redecode" href="#">redecode</a>:
             </p>
             <div
               class="alert alert-success"
               role="alert"
-              id="decode-output-suc"
+              id="decode-output-successfully"
             ></div>
             <div
               class="alert alert-warning"
@@ -369,32 +369,34 @@
         if (!input) {
           return;
         }
-        var decoder_output_suc = document.getElementById("decode-output-suc");
+        var decoder_output_successfully = document.getElementById(
+          "decode-output-successfully"
+        );
         var decoder_output_failed = document.getElementById(
           "decode-output-failed"
         );
         if (input === "ZmFuZy4xMDA3QG9zdS5lZHU=") {
-          decoder_output_suc.innerHTML = atob(input);
+          decoder_output_successfully.innerHTML = atob(input);
           decoder_output_failed.style.display = "none";
-          decoder_output_suc.style.display = "block";
+          decoder_output_successfully.style.display = "block";
+        } else if (!isBase64(input)) {
+          decoder_output_failed.innerHTML = "Invalid input!";
+          decoder_output_successfully.style.display = "none";
+          decoder_output_failed.style.display = "block";
         } else {
-          if (!isBase64(input)) {
-            decoder_output_failed.innerHTML = "Invalid input!";
-          } else {
-            decoder_output_failed.innerHTML = atob(input);
-          }
-          decoder_output_suc.style.display = "none";
+          decoder_output_failed.innerHTML = atob(input);
+          decoder_output_successfully.style.display = "none";
           decoder_output_failed.style.display = "block";
         }
         var decode = document.getElementById("decode");
-        decode.style.display = "none";
         var redecode = document.getElementById("redecode");
+        decode.style.display = "none";
         redecode.style.display = "block";
       }
 
-      // event listener for decoder
-      var decoder = document.getElementById("decoder");
-      decoder.addEventListener("click", function (event) {
+      // event listener for decoder-decode
+      var decoder_decode = document.getElementById("decoder-decode");
+      decoder_decode.addEventListener("click", function (event) {
         event.preventDefault();
         decode();
       });
@@ -406,13 +408,15 @@
         decode();
       });
 
-      // event listener for redecoder
-      var redecoder = document.getElementById("redecoder");
-      redecoder.addEventListener("click", function (event) {
+      // event listener for decoder-redecode
+      var decoder_redecode = document.getElementById("decoder-redecode");
+      decoder_redecode.addEventListener("click", function (event) {
         event.preventDefault();
+        var decoder_input = document.getElementById("input-decoder");
         var redecode = document.getElementById("redecode");
-        redecode.style.display = "none";
         var decode = document.getElementById("decode");
+        decoder_input.value = "";
+        redecode.style.display = "none";
         decode.style.display = "block";
       });
     </script>
