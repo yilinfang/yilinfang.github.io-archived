@@ -46,16 +46,8 @@
       gtag("config", "G-W6X99HY3VK");
     </script>
 
-    <!-- Custom style -->
-    <style>
-      body {
-        font-family: "Source Sans 3", sans-serif;
-      }
-
-      .container {
-        max-width: 800px;
-      }
-    </style>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -116,9 +108,11 @@
           <img
             decoding="async"
             style="width: 128px; height: 128px"
-            class="float-end rounded-circle img-thumbnail"
-            src="img/avatar_256.png"
+            class="float-end rounded-circle shadow"
+            src="img/potrait_256.png"
             alt="Yilin Fang"
+            data-zoomable
+            data-zoom-src="img/potrait_512.png"
           />
 
           <div class="float-start">
@@ -162,8 +156,8 @@
                 >W3CIL Lab</a
               >
               under the supervision of
-              <a href="https://carteryagemann.com/">Prof. Carter Yagemann</a>.
-              My research focuses on the intersection of
+              <a href="https://carteryagemann.com/">Dr. Carter Yagemann</a>. My
+              research focuses on the intersection of
               <b>computer security</b> and <b>machine learning</b>, particularly
               in <b>automated vulnerability discovery</b>, <b>analysis</b> and
               <b>prevention</b>.
@@ -181,7 +175,7 @@
               >
               in 2023, under the guidance of
               <a href="http://faculty.hust.edu.cn/yuanbin12/zh_CN/index.htm"
-                >Prof. Bin Yuan</a
+                >Dr. Bin Yuan</a
               >. During my master's program, it was my great fortune to work
               with <a href="https://wu-yueming.github.io/">Dr. Yueming Wu</a> on
               <b>source-code-level vulnerability discovery</b> and
@@ -325,94 +319,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Custom script -->
-    <script>
-      // set the height of navbar for page-title and all shadow-jar when load or resize
-      function setPageStartAndShadowNavHeight() {
-        var navHeight =
-          document.getElementsByClassName("navbar")[0].offsetHeight;
-        var shadowNavs = document.getElementsByClassName("nav-shadow");
-        for (var i = 0; i < shadowNavs.length; i++) {
-          shadowNavs[i].style.height = navHeight + "px";
-          // set margin-top for all nav-shadows except the first one
-          if (i > 0) {
-            var fontSize = parseFloat(
-              window.getComputedStyle(shadowNavs[i]).fontSize
-            );
-            var marginTop = navHeight - fontSize;
-            shadowNavs[i].style.marginTop = "-" + marginTop + "px";
-          }
-        }
-      }
-      window.onload = setPageStartAndShadowNavHeight;
-      window.onresize = setPageStartAndShadowNavHeight;
+    <!-- Medium Zoom v1.0.8 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"
+      integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
+      crossorigin="anonymous"
+    ></script>
 
-      // check if the input is valid base64 string
-      function isBase64(str) {
-        try {
-          return btoa(atob(str)) == str;
-        } catch (err) {
-          return false;
-        }
-      }
-
-      // decode base64 string from decoder input and put the result back to decoder input
-      function decode() {
-        var decoder_input = document.getElementById("input-decoder");
-        var input = decoder_input.value.trim();
-        if (!input) {
-          return;
-        }
-        var decoder_output_successfully = document.getElementById(
-          "decode-output-successfully"
-        );
-        var decoder_output_failed = document.getElementById(
-          "decode-output-failed"
-        );
-        if (input === "ZmFuZy4xMDA3QG9zdS5lZHU=") {
-          decoder_output_successfully.innerHTML = atob(input);
-          decoder_output_failed.style.display = "none";
-          decoder_output_successfully.style.display = "block";
-        } else if (!isBase64(input)) {
-          decoder_output_failed.innerHTML = "Invalid input!";
-          decoder_output_successfully.style.display = "none";
-          decoder_output_failed.style.display = "block";
-        } else {
-          decoder_output_failed.innerHTML = atob(input);
-          decoder_output_successfully.style.display = "none";
-          decoder_output_failed.style.display = "block";
-        }
-        var decode = document.getElementById("decode");
-        var redecode = document.getElementById("redecode");
-        decode.style.display = "none";
-        redecode.style.display = "block";
-      }
-
-      // event listener for decoder-decode
-      var decoder_decode = document.getElementById("decoder-decode");
-      decoder_decode.addEventListener("click", function (event) {
-        event.preventDefault();
-        decode();
-      });
-
-      // event listener for decoder input
-      var form_decoder = document.getElementById("form-decoder");
-      form_decoder.addEventListener("submit", function (event) {
-        event.preventDefault();
-        decode();
-      });
-
-      // event listener for decoder-redecode
-      var decoder_redecode = document.getElementById("decoder-redecode");
-      decoder_redecode.addEventListener("click", function (event) {
-        event.preventDefault();
-        var decoder_input = document.getElementById("input-decoder");
-        var redecode = document.getElementById("redecode");
-        var decode = document.getElementById("decode");
-        decoder_input.value = "";
-        redecode.style.display = "none";
-        decode.style.display = "block";
-      });
-    </script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
   </body>
 </html>
