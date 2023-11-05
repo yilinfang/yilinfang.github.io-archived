@@ -111,12 +111,12 @@
             (he/him/his)
           </div>
           <img
+            id="zoom-potrait"
             decoding="async"
             style="width: 128px; height: 128px"
-            class="float-end rounded-circle shadow"
+            class="float-end rounded-circle img-thumbnail"
             src="img/potrait_256.png"
             alt="Yilin Fang"
-            data-zoomable
             data-zoom-src="img/potrait_512.png"
           />
 
@@ -333,9 +333,22 @@
 
     <!-- Custom Script -->
     <script>
-      // set medium-zoom for all images with data-zoomable attribute
-      mediumZoom("[data-zoomable]", {
+      // set medium-zoom for potrait
+      const zoom_potrait = mediumZoom("#zoom-potrait", {
         background: "#FFFFFFEE",
+      });
+      const img_potrait = zoom_potrait.getImages()[0];
+      // remove img-thumbnail and add shdow to potrait when zoom in
+      zoom_potrait.on("open", (event) => {
+        const classList = img_potrait.classList;
+        classList.remove("img-thumbnail");
+        classList.add("shadow");
+      });
+      // remove shdow and add img-thumbnail to potrait when zoom out
+      zoom_potrait.on("close", (event) => {
+        const classList = img_potrait.classList;
+        classList.remove("shadow");
+        classList.add("img-thumbnail");
       });
 
       // set the height of navbar for page-title and all shadow-jar when load or resize
