@@ -335,7 +335,7 @@
     <script>
       // set medium-zoom for potrait
       const zoom_potrait = mediumZoom("#zoom-potrait", {
-        background: "#ffffffee",
+        background: "#ffffffe0",
       });
       const img_potrait = zoom_potrait.getImages()[0];
       // remove img-thumbnail and add shdow to potrait when zoom in
@@ -353,17 +353,17 @@
 
       // set the height of navbar for page-title and all shadow-jar when load or resize
       function setPageStartAndShadowNavHeight() {
-        var navHeight =
+        const navHeight =
           document.getElementsByClassName("navbar")[0].offsetHeight;
-        var shadowNavs = document.getElementsByClassName("nav-shadow");
+        const shadowNavs = document.getElementsByClassName("nav-shadow");
         for (var i = 0; i < shadowNavs.length; i++) {
           shadowNavs[i].style.height = navHeight + "px";
           // set margin-top for all nav-shadows except the first one
           if (i > 0) {
-            var fontSize = parseFloat(
+            const fontSize = parseFloat(
               window.getComputedStyle(shadowNavs[i]).fontSize
             );
-            var marginTop = navHeight - fontSize;
+            const marginTop = navHeight - fontSize;
             shadowNavs[i].style.marginTop = "-" + marginTop + "px";
           }
         }
@@ -382,15 +382,15 @@
 
       // decode base64 string from decoder input and put the result back to decoder input
       function decode() {
-        var decoder_input = document.getElementById("input-decoder");
-        var input = decoder_input.value.trim();
+        const decoder_input = document.getElementById("input-decoder");
+        const input = decoder_input.value.trim();
         if (!input) {
           return;
         }
-        var decoder_output_successfully = document.getElementById(
+        const decoder_output_successfully = document.getElementById(
           "decode-output-successfully"
         );
-        var decoder_output_failed = document.getElementById(
+        const decoder_output_failed = document.getElementById(
           "decode-output-failed"
         );
         if (input === "ZmFuZy4xMDA3QG9zdS5lZHU=") {
@@ -406,33 +406,33 @@
           decoder_output_successfully.style.display = "none";
           decoder_output_failed.style.display = "block";
         }
-        var decode = document.getElementById("decode");
-        var redecode = document.getElementById("redecode");
+        const decode = document.getElementById("decode");
+        const redecode = document.getElementById("redecode");
         decode.style.display = "none";
         redecode.style.display = "block";
       }
 
       // event listener for decoder-decode
-      var decoder_decode = document.getElementById("decoder-decode");
+      const decoder_decode = document.getElementById("decoder-decode");
       decoder_decode.addEventListener("click", function (event) {
         event.preventDefault();
         decode();
       });
 
       // event listener for decoder input
-      var form_decoder = document.getElementById("form-decoder");
+      const form_decoder = document.getElementById("form-decoder");
       form_decoder.addEventListener("submit", function (event) {
         event.preventDefault();
         decode();
       });
 
       // event listener for decoder-redecode
-      var decoder_redecode = document.getElementById("decoder-redecode");
+      const decoder_redecode = document.getElementById("decoder-redecode");
       decoder_redecode.addEventListener("click", function (event) {
         event.preventDefault();
-        var decoder_input = document.getElementById("input-decoder");
-        var redecode = document.getElementById("redecode");
-        var decode = document.getElementById("decode");
+        const decoder_input = document.getElementById("input-decoder");
+        const redecode = document.getElementById("redecode");
+        const decode = document.getElementById("decode");
         decoder_input.value = "";
         redecode.style.display = "none";
         decode.style.display = "block";
